@@ -1,15 +1,5 @@
 import turtle
 
-turtle.pensize(2)
-
-def drawShapeUsingForwardLeft(color):
-    turtle.forward(100)
-    turtle.left(120)
-    turtle.forward(100)
-    turtle.left(120)
-    turtle.forward(100)
-
-
 def drawShape(color, start, points):
     turtle.pencolor(color)
     turtle.penup()
@@ -23,12 +13,8 @@ def drawShape(color, start, points):
     turtle.goto(start)
     turtle.end_fill()
     turtle.penup()
-    
-print("Using Forward Left")
-drawShapeUsingForwardLeft("blue")
 
 print("Using DrawShape method")
-triangleShape=[(200,0), (100,100),(0,0)]
-drawShape("red",(100,-100), triangleShape)
-
+rectangleShape = [ (0, 50), (100,50), (100,0),(0, 0)]
+drawShape("red",(0, 0), rectangleShape)
 
