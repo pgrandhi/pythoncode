@@ -6,12 +6,13 @@ def drawLine(color, start, end):
     turtle.pencolor(color)
     turtle.penup()
     turtle.goto(start)
+    turtle.write(str(start),True) 
     turtle.pendown()
     turtle.begin_fill()
     turtle.goto(end)
     turtle.end_fill()
     turtle.penup()
+    turtle.write(str(end),True) 
 
-print("-39,48")
 drawLine("red",(-39,48),(50,-50))
-print("50,-50")
+
