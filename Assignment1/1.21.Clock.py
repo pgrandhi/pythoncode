@@ -12,12 +12,10 @@ def drawLine(color, start, end):
     turtle.penup()
     turtle.goto(start)
     turtle.pendown()
-    turtle.begin_fill()
     turtle.goto(end)
-    turtle.end_fill()
     turtle.penup()
     
 drawCircle("black",0,0)
-drawLine("red",(0,50),(50,50))
-drawLine("blue",(0,50),(0,100))
+drawLine("black",(0,50),(50,50))
+drawLine("black",(0,50),(0,100))
 

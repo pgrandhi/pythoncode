@@ -8,9 +8,7 @@ def drawLine(color, start, end):
     turtle.goto(start)
     turtle.write(str(start),True) 
     turtle.pendown()
-    turtle.begin_fill()
     turtle.goto(end)
-    turtle.end_fill()
     turtle.penup()
     turtle.write(str(end),True) 
 

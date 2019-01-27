@@ -7,17 +7,15 @@ def drawLine(color, start, end):
     turtle.penup()
     turtle.goto(start)
     turtle.pendown()
-    turtle.begin_fill()
     turtle.goto(end)
-    turtle.end_fill()
     turtle.penup()
 
-drawLine("red",(40,-69.28), (-40,-69.28))
-drawLine("red", (-40,-69.28),(-80,-9.8))
-drawLine("red",(-80,-9.8), (-40,69))
-drawLine("red",(-40,69), (40,69))
-drawLine("red",(40,69),(80,0))
-drawLine("red",(80,0),(40,-69.28))
+drawLine("black",(40,-69.28), (-40,-69.28))
+drawLine("black", (-40,-69.28),(-80,-9.8))
+drawLine("black",(-80,-9.8), (-40,69))
+drawLine("black",(-40,69), (40,69))
+drawLine("black",(40,69),(80,0))
+drawLine("black",(80,0),(40,-69.28))
          
 
 
