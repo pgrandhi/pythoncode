@@ -8,5 +8,7 @@ from Note import Note
 n1 = Note("This is my first note")
 n2 = Note("This is my second note", "second")
 
-print("n1.id:",n1.id," n1.memo:",n1.memo," n1.tags:",n1.tags," n1.creationDate:",n1.creationDate)
-print("n2.id:",n2.id," n2.memo:",n2.memo," n2.tags:",n2.tags," n2.creationDate:",n2.creationDate)
+print("n1.id:",n1.getId()," n1.memo:",n1.getMemo()," n1.tags:",n1.tags," n1.getCreationDate():",n1.getCreationDate())
+print("n2.id:",n2.getId()," n2.memo:",n2.getMemo()," n2.tags:",n2.tags," n2.getCreationDate():",n2.getCreationDate())
+n2.setMemo("New Memo")
+print("n2.id:",n2.getId()," n2.memo:",n2.getMemo()," n2.tags:",n2.tags," n2.getCreationDate():",n2.getCreationDate())
