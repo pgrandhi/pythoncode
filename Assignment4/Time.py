@@ -1,11 +1,10 @@
 import datetime
 from datetime import timedelta
 class Time:
-    def __init__(self):
-        self.__now = datetime.datetime.now()
-        self.__hour = self.__now.hour
-        self.__minute = self.__now.minute
-        self.__second = self.__now.second
+    def __init__(self):        
+        self.__hour = datetime.datetime.now().hour
+        self.__minute = datetime.datetime.now().minute
+        self.__second = datetime.datetime.now().second
         
     def getHour(self):
         return self.__hour
