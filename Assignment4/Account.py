@@ -1,7 +1,6 @@
 import datetime
 class Account:
-    def __init__(self, accountId = 0, balance=100, annualInterestRate=0):
-        self.__creationDate = datetime.date.today()
+    def __init__(self, accountId = 0, balance=100, annualInterestRate=0):        
         self.__id = accountId
         self.__balance = balance
         self.__annualInterestRate = annualInterestRate
