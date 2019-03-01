@@ -14,19 +14,19 @@ class LoanCalculator:
 
         #anything binding to controls should be a string. So all are stringVars
         self.annualInterestRateVar = StringVar()
-        Entry(window,textvariabl=self.annualInterestRateVar, justify=RIGHT).grid(row=1,column=2)
+        Entry(window,textvariable=self.annualInterestRateVar, justify=RIGHT).grid(row=1,column=2)
 
         self.numberOfYearsVar = StringVar()
-        Entry(window,textvariabl=self.numberOfYearsVar, justify=RIGHT).grid(row=2,column=2)
+        Entry(window,textvariable=self.numberOfYearsVar, justify=RIGHT).grid(row=2,column=2)
         
         self.loanAmountVar = StringVar()
-        Entry(window,textvariabl=self.loanAmountVar, justify=RIGHT).grid(row=3,column=2)
+        Entry(window,textvariable=self.loanAmountVar, justify=RIGHT).grid(row=3,column=2)
 
         self.monthlyPaymentVar = StringVar()
-        Label(window, textvariabl=self.monthlyPaymentVar).grid(row=4,column=2,sticky=E)
+        Label(window, textvariable=self.monthlyPaymentVar).grid(row=4,column=2,sticky=E)
 
         self.totalPaymentVar = StringVar()
-        Label(window, textvariabl=self.totalPaymentVar).grid(row=5,column=2,sticky = E)
+        Label(window, textvariable=self.totalPaymentVar).grid(row=5,column=2,sticky = E)
 
         Button(window,text="Compute Payment",command=self.computePayment).grid(row=6,column=2,sticky=E)
 
@@ -35,8 +35,10 @@ class LoanCalculator:
 
     def computePayment(self):
         numberOfYears = int(self.numberOfYearsVar.get())
+        monthlyInterestRate = float(self.annualInterestRateVar.get())/12
+        monthlyInterestRate /= 100
         monthlyPayment = self.getMonthlyPayment(float(self.loanAmountVar.get()),
-                                                float(self.annualInterestRateVar.get())/12,
+                                                monthlyInterestRate,
                                                 numberOfYears)
         
         totalPayment = monthlyPayment * 12 * numberOfYears
