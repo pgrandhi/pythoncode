@@ -8,7 +8,7 @@ class printGraph:
     def __init__(self):
         window = Tk()
         window.title("Graph")
-        self.canvas = Canvas(window, width= 400, height = 400, bg="white")
+        self.canvas = Canvas(window, width= 200, height = 200, bg="white")
         self.canvas.pack()
         
         self.filename = input("Enter a filename:")
@@ -47,9 +47,8 @@ class printGraph:
             startY = self.vertexList[startVertex].y
             endX =  self.vertexList[endVertex].x
             endY =  self.vertexList[endVertex].y
+            self.canvas.create_text(startX-5, startY-5, fill = 'black', text='{}'.format(startVertex))
             self.canvas.create_oval(startX, startY, startX, startY, width = 2, fill = 'black')
             self.canvas.create_line(startX, startY, endX, endY)
         
-    
-    
 printGraph()
