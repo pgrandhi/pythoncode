@@ -1,0 +1,7 @@
+Use employeedb;
+CREATE TABLE InvestmentCalculator(
+ Id INT PRIMARY KEY auto_increment,    
+ InvestmentAmount FLOAT,    
+ NumberOfYears INT,    
+ AnnualInterestRate FLOAT,    
+ FutureValue FLOAT)

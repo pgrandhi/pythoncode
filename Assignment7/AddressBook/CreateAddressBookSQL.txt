@@ -1,0 +1,8 @@
+Use employeedb;
+CREATE TABLE addressbook(
+ Id INT PRIMARY KEY auto_increment,    
+ Name VARCHAR(30) NOT NULL,    
+ Street VARCHAR(30) NOT NULL,    
+ City VARCHAR(20) NOT NULL,    
+ State VARCHAR(20) NOT NULL,    
+ Zip VARCHAR(10) NOT NULL );
