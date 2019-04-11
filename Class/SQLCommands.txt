@@ -1,0 +1,18 @@
+
+SQL - Structured Query Language
+It consists of DDL and DML
+
+DDL - Data Definition Language - to create/alter/drop tables, databasesetc.
+DML - Data Manipulation Language - select/insert/update/delete data into the tables 
+
+CREATE DATABASE employeedb;
+
+USE employeedb;
+CREATE TABLE employees(
+   Id INT PRIMARY KEY auto_increment,
+   FirstName VARCHAR(30) NOT NULL,
+   LastName VARCHAR(30) NOT NULL,
+   Age INT,
+   Gender CHAR(1),
+   Income FLOAT
+)
